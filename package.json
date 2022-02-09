@@ -1,0 +1,29 @@
+{
+  "name": "mongo-backend",
+  "version": "1.0.0",
+  "description": "This has been made for me to play around with the backend more and allow me to get a better understanding",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "devStart" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erdogan90/Mongo-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erdogan90/Mongo-backend/issues"
+  },
+  "homepage": "https://github.com/Erdogan90/Mongo-backend#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
