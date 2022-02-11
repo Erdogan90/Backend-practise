@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "devStart": "nodemon app.js"
+    "devStart": "nodemon app.js",
+    "dbcreatetable": "node -r dotenv/config ./db/createtable.js",
+    "dbpopulatetable": "node -r dotenv/config ./db/populatetable.js"
   },
   "repository": {
     "type": "git",
