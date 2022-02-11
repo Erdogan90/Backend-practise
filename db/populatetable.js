@@ -8,8 +8,8 @@ async function populateGoalsTable(){
     for(let i = 0; i < topGoalScorers.length; i++){
         const name = topGoalScorers[i].name;
         const goals = topGoalScorers[i].goals;
-        const create = await pool.query(sqlString, [name, score])
-
+        const create = await pool.query(sqlString, [name, goals]);
+        console.log(create)
     }
 }
 populateGoalsTable()
