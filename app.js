@@ -1,8 +1,10 @@
 import express from "express";
-import {allPlayers, getPlayersbyId} from "./models/index.js";
+import {allPlayers, getPlayersById, updateGoalsById} from "./models/index.js";
 import topGoalScorers from "./data/index.js"
+import fs from "fs"
 
 const app = express()
+app.use(express.json());
 
 //All player data
 
@@ -16,8 +18,17 @@ app.get("/players", function(req, res){
 
 app.get("/players/:id", function(req,res){
     const id = Number(req.params.id);
-    const idFound = getPlayersbyId(id)
+    const idFound = getPlayersById(id)
     res.json({success: true, payload: idFound})
 })
+
+//Update player by id
+app.put("/players/:id", function(req, res){
+    const id = Number(req.params.id);
+    const updateGoals = req.body
+    const goalsReplacement = updateGoalsById (id, updateGoals)
+    res.json({success: true, payload: goalsReplacement})
+})
+
 
 app.listen(3000, () => console.log("Server Started"))
