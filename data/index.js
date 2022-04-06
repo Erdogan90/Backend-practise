@@ -2,7 +2,7 @@ const topGoalScorers = [
     {
         id:1,
         name: "Cristiano Ronaldo",
-        goals: 803
+        goals: 805
     },
     {
         id:2,
