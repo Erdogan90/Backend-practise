@@ -7,7 +7,7 @@ const topGoalScorers = [
     {
         id:2,
         name: "Pele",
-        goals: 765
+        goals: 767
     },
     {
         id:3,
